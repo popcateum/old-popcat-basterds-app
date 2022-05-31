@@ -15,7 +15,7 @@
       </div>
       <div class="window-content">
         <div class="menu-list">
-          <a href="#my-nft" class="header-menu-item-link" style="color: black;" on:click>
+          <a href="/#my-nft" class="header-menu-item-link" style="color: black;" on:click>
             <div class="header-menu-item-text" style="color: black;">MyNFT</div>
           </a>
         </div>
@@ -25,7 +25,7 @@
           </a>
         </div>
         <div class="menu-list">
-          <a href="#status" class="header-menu-item-link" on:click>
+          <a href="/#status" class="header-menu-item-link" on:click>
             <div class="header-menu-item-text">Status</div>
           </a>
         </div>

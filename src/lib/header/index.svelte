@@ -23,12 +23,12 @@
   </div>
   <div class="header-menu">
     <div class="header-menu-item">
-      <a href="#my-nft" class="header-menu-item-link" style="color: black;">
+      <a href="/#my-nft" class="header-menu-item-link" style="color: black;">
         <div class="header-menu-item-text" style="color: black;">MyNFT</div>
       </a>
     </div>
     <div class="header-menu-item">
-      <a href="#status" class="header-menu-item-link" style="color: black;">
+      <a href="/#status" class="header-menu-item-link" style="color: black;">
         <div class="header-menu-item-text" style="color: black;">Status</div>
       </a>
     </div>
