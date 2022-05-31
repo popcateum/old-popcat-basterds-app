@@ -16,7 +16,6 @@
     for (let i = 0; i < 8; i++) {
       saleMintState[i].current = parseInt(data[i])
     }
-    // console.log(saleMintState)
   }
   test()
 </script>

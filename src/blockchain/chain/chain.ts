@@ -1,9 +1,17 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { ethers } from 'ethers'
 import Web3Modal from 'web3modal'
 // import WalletConnectProvider from '@walletconnect/web3-provider'
 
 // let ethereum: any | undefined
 // let providerOptions: any
+
+declare global {
+  interface Window {
+    WalletConnectProvider: any
+  }
+}
+
 let provider: any
 let web3Modal: any
 let instance: any
@@ -102,5 +110,5 @@ async function connectState() {
 // }
 
 export {
-  web3ModalConnect, getInstance, getProvider, getSigner, disconnect, getAddress, getShortAddress, getChainId, accountsChanged, chainChanged, connectState, provider, signer
+  web3ModalConnect, getInstance, getProvider, getSigner, disconnect, getAddress, getShortAddress, getChainId, accountsChanged, chainChanged, connectState, provider, signer, web3Modal
 }

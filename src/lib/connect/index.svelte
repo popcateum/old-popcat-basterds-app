@@ -10,10 +10,6 @@
     myBalance,
     myNftImages,
     myIsMinted,
-    myFirstTxHash,
-    myFirstTxTime,
-    myFirstTxBlcok,
-    myFirstTxHashShort
   } from '$stores/index'
   import {
     web3ModalConnect,
@@ -24,7 +20,6 @@
     chainChanged,
     getAddress,
     getShortAddress,
-    connectState,
     disconnect
   } from '$blockchain/chain/chain'
   import { balanceOf, tokenOfOwnerByIndex, tokenURI } from '$blockchain/contracts/oldpopcatbasterds'
@@ -32,8 +27,17 @@
   import Fa from 'svelte-fa'
   import { faAngleDown } from '@fortawesome/free-solid-svg-icons/faAngleDown'
   import { faAngleUp } from '@fortawesome/free-solid-svg-icons/faAngleUp'
+  import { onMount } from 'svelte'
 
   let isOpen = false
+
+  onMount(async () => {
+    const walletState = localStorage.getItem('WEB3_CONNECT_CACHED_PROVIDER')
+    console.log(walletState)
+    if (walletState === `"injected"`) {
+      await connect()
+    }
+  })
 
   async function connect() {
     await web3ModalConnect()
@@ -55,21 +59,16 @@
     chainChanged()
   }
 
-  function getShortTx(tx: string) {
-    return `${tx.slice(0, 8)}...${tx.slice(-6)}`
-  }
-
   async function setAddressData() {
     try {
-      const wlInfo = await axios({
-        method: 'get',
-        url: `https://api.oldpopcatbasterds.com/whitelist/info?address=${$myAddress}`
-      })
-      $myYear = wlInfo.data.year
-      $myFirstTxHash = wlInfo.data.first_tx_hash
-      $myFirstTxHashShort = getShortTx(wlInfo.data.first_tx_hash)
-      $myFirstTxTime = wlInfo.data.first_tx_time
-      $myFirstTxBlcok = wlInfo.data.first_tx_block
+      // const wlInfo = await axios({
+      //   method: 'get',
+      //   url: `https://api.oldpopcatbasterds.com/whitelist/info?address=${$myAddress}`
+      // })
+      $myYear = 2022
+      $myAddressPercent = '92.99%'
+      // $myYear = wlInfo.data.year
+      // $myAddressPercent = wlInfo.data.date_info.top_percent
     } catch (e) {
       console.log(e)
     }

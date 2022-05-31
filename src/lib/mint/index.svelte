@@ -147,7 +147,7 @@
           </div>
           <div class="window-content">
             <div class="image-wrap">
-              <img src="images/eth.png" alt="eth" />
+              <img src="/images/eth.png" alt="eth" />
             </div>
             <div class="content-paragraph">
               Your ETHEREUM wallet was born in <span class="red-sentence">{$myYear}</span>.

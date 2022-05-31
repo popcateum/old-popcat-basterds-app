@@ -11,7 +11,7 @@
   <div class="footer">
     <div class="footer-item">
       <div class="footer-logo">
-        <img src="images/footer-logo.png" alt="footer-logo" />
+        <img src="/images/footer-logo.png" alt="footer-logo" />
         <div class="sub-text-two">Powered by Popcateum</div>
       </div>
       <div class="footer-content">

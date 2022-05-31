@@ -11,10 +11,15 @@
 
 <div class="header">
   <div class="header-logo">
-    <a href="/" class="header-logo-link">
+    <div
+      class="header-logo-link"
+      on:click="{() => {
+        location.href = `/`
+      }}"
+    >
       <img src="/images/oldpopcat.gif" alt="logo" class="header-logo-img" />
       <div class="header-logo-title">OLD POPCAT BASTERDS</div>
-    </a>
+    </div>
   </div>
   <div class="header-menu">
     <div class="header-menu-item">
@@ -60,6 +65,7 @@
     justify-content: center;
     align-items: center;
     text-decoration: none;
+    cursor: pointer;
   }
 
   .header-logo-title {

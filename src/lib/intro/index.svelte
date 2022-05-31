@@ -14,6 +14,7 @@
   function checkWallet() {
     if ($myYear > 0) {
       // push(`/wallet/${$myAddress}`)
+      location.href = `/wallet/${$myAddress}`
     } else {
       modalState = !modalState
     }
@@ -26,7 +27,7 @@
   {#if isMouseOver}
     <img src="images/popcat1.png" alt="popcat" on:mouseenter="{popcatImageupdate}" />
   {:else}
-  <!-- svelte-ignore a11y-mouse-events-have-key-events -->
+    <!-- svelte-ignore a11y-mouse-events-have-key-events -->
     <img src="images/popcat2.png" alt="popcat" on:mouseout="{popcatImageupdate}" />
   {/if}
 </div>
@@ -44,7 +45,7 @@
   {#if isMouseOver}
     <img src="images/popcat1.png" alt="popcat" on:mouseenter="{popcatImageupdate}" />
   {:else}
-  <!-- svelte-ignore a11y-mouse-events-have-key-events -->
+    <!-- svelte-ignore a11y-mouse-events-have-key-events -->
     <img src="images/popcat2.png" alt="popcat" on:mouseout="{popcatImageupdate}" />
   {/if}
 </div>
