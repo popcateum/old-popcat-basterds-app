@@ -150,7 +150,7 @@
             <div class="content-paragraph">Your wallet is not in the snapshot.</div>
             <div class="content-paragraph">The snapshot period is from ethereum genesis block to May 20.</div>
             <div>
-              <button class="normal-button" on:click> main page </button>
+              <button class="normal-button" on:click="{() => (location.href = `/`)}"> main page </button>
             </div>
           </div>
         </div>
