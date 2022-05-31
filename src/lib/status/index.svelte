@@ -9,15 +9,15 @@
   let saleMintState: any = infoData
   let total: any
 
-  async function test() {
-    // const data = await getMintState()
+  async function getStatus() {
+    const data = await getMintState()
     total = await totalSupply()
-    const data = ['33', '10', '10', '10', '51', '15', '55', '100']
+    // const data = ['33', '10', '10', '10', '51', '15', '55', '100']
     for (let i = 0; i < 8; i++) {
       saleMintState[i].current = parseInt(data[i])
     }
   }
-  test()
+  getStatus()
 </script>
 
 {#if modalState}
