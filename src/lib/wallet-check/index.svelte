@@ -37,14 +37,14 @@
       navigator
         .share({
           text: 'Old Popcat Basterds',
-          url: `https://oldpopcatbasterds.com/wallet/${thisAddress}?${walletData.year}`
+          url: `https://oldpopcatbasterds.com/wallet/${thisAddress}?year=${walletData.year}`
         })
         .then(() => console.log('share success'))
         .catch(error => console.log('share error', error))
     } else {
       const t = document.createElement('textarea')
       document.body.appendChild(t)
-      t.value = `https://oldpopcatbasterds.com/wallet/${thisAddress}?${walletData.year}`
+      t.value = `https://oldpopcatbasterds.com/wallet/${thisAddress}?year=${walletData.year}`
       t.select()
       document.execCommand('copy')
       document.body.removeChild(t)
