@@ -13,6 +13,13 @@
   <meta property="og:title" content="Old Popcat Basterds" />
   <meta property="og:description" content="The world’s first NFT project based on real Ethereum history." />
   <meta property="og:image" content="/images/og-image.png" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Old Popcat Basterds" />
+  <meta
+    name="twitter:description"
+    content="The world’s first NFT project based on real Ethereum history."
+  />
+  <meta name="twitter:image" content="/images/og-image.png" />
 </svelte:head>
 
 <div class="background">

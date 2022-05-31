@@ -40,6 +40,13 @@
   <meta property="og:title" content="{ogTitle}" />
   <meta property="og:description" content="{ogDescription}" />
   <meta property="og:image" content="{ogImage}" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="{ogTitle}" />
+  <meta
+    name="twitter:description"
+    content="{ogDescription}"
+  />
+  <meta name="twitter:image" content="{ogImage}" />
 </svelte:head>
 
 <div class="background">
