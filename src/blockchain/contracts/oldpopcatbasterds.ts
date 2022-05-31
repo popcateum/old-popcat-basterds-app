@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { provider } from '../chain/chain';
 import { ethers, Contract } from 'ethers';
 import ERC721AbiJSON from '../abi/OldPopcatBasterds.json';

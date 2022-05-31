@@ -2,14 +2,12 @@
   import Saos from 'saos'
   import { onMount } from 'svelte'
   import Mint from '$lib/mint/index.svelte'
-  import Copy from './copy.svelte'
 
   export let address: string
 
   let yearData: any = []
   let thisAddress: any
   let modalState: boolean = false
-  let copyModalState: boolean = false
   let isWallet: boolean
   let walletData = {
     address: '',
@@ -36,18 +34,10 @@
       navigator
         .share({
           text: 'Old Popcat Basterds',
-          url: `https://oldpopcatbasterds.com/wallet/${thisAddress}?${walletData.year}`
+          url: `https://oldpopcatbasterds.com/#/wallet/${thisAddress}`
         })
         .then(() => console.log('share success'))
         .catch(error => console.log('share error', error))
-    } else {
-      const t = document.createElement('textarea')
-      document.body.appendChild(t)
-      t.value = `https://oldpopcatbasterds.com/wallet/${thisAddress}?${walletData.year}`
-      t.select()
-      document.execCommand('copy')
-      document.body.removeChild(t)
-      copyModalState = true
     }
   }
 
@@ -70,13 +60,16 @@
           }
         }
       }
+      // console.log(data.data)
       walletData.year = data.data.year
       walletData.address = data.data.address
       walletData.date = data.data.date_info.date_string
       walletData.percent = data.data.date_info.top_percent
       walletData.txHash = data.data.first_tx_hash
       setMyAddressPopcat(walletData.year)
-    } catch (e) {}
+    } catch (e) {
+      console.log(e)
+    }
     for (let i = 0; i < 8; i++) {
       let defaultNum = 2015
       if (walletData.year === defaultNum + i) {
@@ -121,19 +114,17 @@
 
 <Mint modalState="{modalState}" on:click="{() => (modalState = !modalState)}" />
 
-<Copy modalState="{copyModalState}" on:click="{() => (copyModalState = !copyModalState)}" />
-
 <div class="space"></div>
 
 <div class="wrap">
   <div class="title-wrap">
     <Saos animation="{'typing 3.5s steps(40, end)'}">
-      <div class="middle-title-color">Check Wallet</div>
+      <div class="middle-title-color">Shared Wallet</div>
     </Saos>
   </div>
   <div class="title-wrap-mobile">
     <Saos animation="{'typing 3.5s steps(40, end)'}">
-      <div class="middle-title-color">Check Wallet</div>
+      <div class="middle-title-color">Shared Wallet</div>
     </Saos>
   </div>
   <div class="content-wrap">
@@ -182,19 +173,15 @@
               </div>
             </div>
             <div class="content-paragraph" style="padding: 20px;">
-              Your ETHEREUM wallet was born in <span class="red-sentence">{walletData.date}</span>.
+              This ETHEREUM wallet was born in <span class="red-sentence">{walletData.date}</span>.
               <br />
-              Your wallet age is top <span class="red-sentence">{walletData.percent}</span> from total Ethereum wallets.
+              This wallet age is top <span class="red-sentence">{walletData.percent}</span> from total Ethereum wallets.
               Click
               <a href="https://etherscan.io/tx/{walletData.txHash}" target="_blank" style="color: #0000aa;">here</a>
               to see the data.
               <br />
               <br />
-              Your can mint <span class="red-sentence">{walletData.popcat}</span>.
-            </div>
-            <div class="button-wrap">
-              <button class="normal-button" on:click="{share}"> share link </button>
-              <button class="normal-button" on:click="{() => (modalState = !modalState)}"> mint </button>
+              Do you want to check your wallet too?
             </div>
           </div>
         </div>

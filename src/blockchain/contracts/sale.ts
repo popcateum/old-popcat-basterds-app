@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { signer, provider } from '../chain/chain';
 import { ethers, Contract } from 'ethers';
 import SaleAbiJSON from '../abi/Sale.json';

@@ -1,6 +1,6 @@
 <script lang="ts">
   import { page } from '$app/stores'
-  import WalletCheck from '$lib/wallet-check/index.svelte'
+  import WalletShare from '$lib/wallet-share/index.svelte'
 
   let address: string
   let shortAddress: string
@@ -43,5 +43,5 @@
 </svelte:head>
 
 <div class="background">
-  <WalletCheck address="{address}" />
+  <WalletShare address="{address}" />
 </div>
