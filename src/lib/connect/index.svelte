@@ -61,14 +61,14 @@
 
   async function setAddressData() {
     try {
-      // const wlInfo = await axios({
-      //   method: 'get',
-      //   url: `https://api.oldpopcatbasterds.com/whitelist/info?address=${$myAddress}`
-      // })
-      $myYear = 2022
-      $myAddressPercent = '92.99%'
-      // $myYear = wlInfo.data.year
-      // $myAddressPercent = wlInfo.data.date_info.top_percent
+      const wlInfo = await axios({
+        method: 'get',
+        url: `https://api.oldpopcatbasterds.com/whitelist/info?address=${$myAddress}`
+      })
+      // $myYear = 2022
+      // $myAddressPercent = '92.99%'
+      $myYear = wlInfo.data.year
+      $myAddressPercent = wlInfo.data.date_info.top_percent
     } catch (e) {
       console.log(e)
     }
