@@ -1,13 +1,12 @@
 <script lang="ts">
   import Saos from 'saos'
   import { onMount } from 'svelte'
-  import Mint from '$lib/mint/index.svelte'
+  import Check from './check.svelte'
 
   export let address: string
 
   let yearData: any = []
   let thisAddress: any
-  let modalState: boolean = false
   let isWallet: boolean
   let walletData = {
     address: '',
@@ -112,8 +111,6 @@
   }
 </script>
 
-<Mint modalState="{modalState}" on:click="{() => (modalState = !modalState)}" />
-
 <div class="space"></div>
 
 <div class="wrap">
@@ -202,6 +199,9 @@
       </div>
     {/if}
   </div>
+  <div class="content-wrap" style="margin-top: 40px;">
+    <Check />
+  </div>
 </div>
 
 <style lang="scss">
@@ -259,13 +259,6 @@
     align-items: center;
   }
 
-  .button-wrap {
-    display: flex;
-    .normal-button {
-      margin: 10px;
-    }
-  }
-
   @media screen and (max-width: 1000px) {
     .image-wrap {
       display: none;
@@ -288,9 +281,6 @@
     }
     .title-wrap-mobile {
       display: flex;
-      flex-direction: column;
-    }
-    .button-wrap {
       flex-direction: column;
     }
   }

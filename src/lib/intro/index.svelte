@@ -13,8 +13,7 @@
 
   function checkWallet() {
     if ($myYear > 0) {
-      // push(`/wallet/${$myAddress}`)
-      location.href = `/wallet/${$myAddress}`
+      location.href = `/wallet/${$myAddress}?${$myYear}`
     } else {
       modalState = !modalState
     }
