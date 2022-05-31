@@ -1,0 +1,527 @@
+@import "./variables.scss";
+
+@keyframes -global-scale-in-center {
+  0% {
+    transform: scale(0);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, 100%, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateZ(0);
+  }
+}
+
+html body {
+  font-family: 'Kongtext';
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+}
+
+.web3modal-provider-name {
+  font-size: 18px !important;
+}
+
+.web3modal-provider-description {
+  font-size: 14px !important;
+}
+
+.background {
+  background-color: $primary-color;
+  position: relative;
+  z-index: 1;
+}
+
+.header-space {
+  height: 86px;
+}
+
+.normal-button {
+  background-color: $normal-button-color;
+  box-shadow: 8px 8px #000;
+  text-align: center;
+  padding: 15px 20px;
+  color: $primary-color;
+  font-family: 'Kongtext';
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.normal-button:active {
+  color: white;
+  background-color: black;
+  box-shadow: 0px 0px #000;
+}
+
+.wallet-button {
+  background-color: #EDBDF4;
+  box-shadow: 8px 8px #000;
+  text-align: center;
+  padding: 15px 20px;
+  color: $primary-color;
+  font-family: 'Kongtext';
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.wallet-button:active {
+  color: white;
+  background-color: black;
+  box-shadow: 0px 0px #000;
+}
+
+.wrap {
+  max-width: 1000px;
+  margin: 100px auto;
+}
+
+.content-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.title-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 30px;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+
+.title-wrap-mobile {
+  display: none;
+}
+
+.middle-title {
+  font-family: 'Karmatic Arcade';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 52px;
+  line-height: 60px;
+  background: white;
+  letter-spacing: -0.01em;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  white-space: nowrap;
+
+}
+
+@keyframes typing {
+  from {
+    width: 0
+  }
+
+  to {
+    width: 100%
+  }
+}
+
+.middle-title-color {
+  font-family: 'Karmatic Arcade';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 52px;
+  line-height: 60px;
+  letter-spacing: -0.01em;
+  background: linear-gradient(90deg, #05f4fb 0%, #f6efa7 104.29%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  white-space: nowrap;
+}
+
+.window-box {
+  background: $secondary-color;
+  box-shadow: 15px 15px #000;
+  font-family: PC Senior;
+}
+
+.window-bar {
+  background: $primary-color;
+  height: 50px;
+  width: 100%;
+  position: relative;
+  z-index: 1;
+  border: 5px solid #a29ca3;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.window-close {
+  background: #b8bbb7;
+  border: 2px solid #a29ca3;
+  box-sizing: border-box;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 22px;
+  margin: 5px;
+  line-height: 1;
+  box-sizing: border-box;
+
+  .x-box {
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    color: black;
+    cursor: pointer;
+  }
+}
+
+.window-content {
+  margin: 12px;
+  padding: 15px;
+  border: 3px solid #9d9d9d;
+  box-sizing: border-box;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 40px;
+  color: black;
+}
+
+.content-paragraph {
+  margin-bottom: 30px;
+}
+
+.red-sentence {
+  color: $red;
+}
+
+.blue-sentence {
+  color: $primary-color;
+}
+
+.header {
+  padding: 0.5em;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 2;
+}
+
+@media screen and (max-width: 1280px) {
+  .normal-button {
+    background-color: $normal-button-color;
+    box-shadow: 8px 8px #000;
+    text-align: center;
+    padding: 15px 20px;
+    color: $primary-color;
+    font-family: 'Kongtext';
+    font-size: 14px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+
+  .wallet-button {
+    background-color: #EDBDF4;
+    box-shadow: 8px 8px #000;
+    text-align: center;
+    padding: 15px 20px;
+    color: $primary-color;
+    font-family: 'Kongtext';
+    font-size: 14px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+
+  .wrap {
+    max-width: 768px;
+    margin: 100px auto;
+  }
+
+  .content-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .title-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 30px;
+  }
+
+  .middle-title {
+    font-family: 'Karmatic Arcade';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 36px;
+    background: white;
+    letter-spacing: -0.01em;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .middle-title-color {
+    font-family: 'Karmatic Arcade';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 36px;
+    letter-spacing: -0.01em;
+    background: linear-gradient(90deg, #05f4fb 0%, #f6efa7 104.29%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .window-box {
+    background: $secondary-color;
+    box-shadow: 15px 15px #000;
+    font-family: PC Senior;
+  }
+
+  .window-bar {
+    background: $primary-color;
+    height: 50px;
+    width: 100%;
+    position: relative;
+    z-index: 1;
+    border: 5px solid #a29ca3;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .window-close {
+    background: #b8bbb7;
+    border: 2px solid #a29ca3;
+    box-sizing: border-box;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 22px;
+    margin: 5px;
+    line-height: 1;
+    box-sizing: border-box;
+
+    .x-box {
+      width: 30px;
+      height: 30px;
+      text-align: center;
+      color: black;
+    }
+  }
+
+  .window-content {
+    margin: 12px;
+    padding: 15px;
+    border: 3px solid #9d9d9d;
+    box-sizing: border-box;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 30px;
+    color: black;
+  }
+
+  .content-paragraph {
+    margin-bottom: 20px;
+  }
+
+  .red-sentence {
+    color: $red;
+  }
+
+  .blue-sentence {
+    color: $primary-color;
+  }
+
+  .header {
+    // padding: 0.5em;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 2;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .normal-button {
+    background-color: $normal-button-color;
+    box-shadow: 8px 8px #000;
+    text-align: center;
+    padding: 15px 20px;
+    color: $primary-color;
+    font-family: 'Kongtext';
+    font-size: 11px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+
+  .wallet-button {
+    background-color: #EDBDF4;
+    box-shadow: 8px 8px #000;
+    text-align: center;
+    padding: 15px 20px;
+    color: $primary-color;
+    font-family: 'Kongtext';
+    font-size: 11px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+
+  .wrap {
+    max-width: 345px;
+    margin: 60px auto;
+  }
+
+  .content-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .title-wrap {
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 30px;
+  }
+
+  .title-wrap-mobile {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 30px;
+  }
+
+  .middle-title {
+    font-family: 'Karmatic Arcade';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 34px;
+    line-height: 39px;
+    background: white;
+    letter-spacing: -0.01em;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .middle-title-color {
+    font-family: 'Karmatic Arcade';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 34px;
+    line-height: 39px;
+    letter-spacing: -0.01em;
+    background: linear-gradient(90deg, #05f4fb 0%, #f6efa7 104.29%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .window-box {
+    background: $secondary-color;
+    box-shadow: 15px 15px #000;
+    font-family: PC Senior;
+    margin: 10px;
+  }
+
+  .window-bar {
+    background: $primary-color;
+    height: 50px;
+    width: 100%;
+    position: relative;
+    z-index: 1;
+    border: 5px solid #a29ca3;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .window-close {
+    background: #b8bbb7;
+    border: 2px solid #a29ca3;
+    box-sizing: border-box;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 22px;
+    margin: 5px;
+    line-height: 1;
+    box-sizing: border-box;
+
+    .x-box {
+      width: 30px;
+      height: 30px;
+      text-align: center;
+      color: black;
+    }
+  }
+
+  .window-content {
+    margin: 12px;
+    padding: 15px;
+    border: 3px solid #9d9d9d;
+    box-sizing: border-box;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 24px;
+    color: black;
+  }
+
+  .content-paragraph {
+    margin-bottom: 20px;
+  }
+
+  .red-sentence {
+    color: $red;
+  }
+
+  .blue-sentence {
+    color: $primary-color;
+  }
+
+  .header {
+    // padding: 0.5em;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 2;
+  }
+}
