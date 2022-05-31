@@ -3,8 +3,10 @@
   import { getMintState } from '$blockchain/contracts/sale'
   import { totalSupply } from '$blockchain/contracts/oldpopcatbasterds'
   import { infoData } from '$lib/data/index'
+  import Mint from '$lib/mint/index.svelte'
 
   let modalState: boolean = false
+  let mintModalState: boolean = false
 
   let saleMintState: any = infoData
   let total: any
@@ -19,6 +21,8 @@
   }
   getStatus()
 </script>
+
+<Mint modalState="{mintModalState}" on:click="{() => (mintModalState = !mintModalState)}" />
 
 {#if modalState}
   <div class="modal">
@@ -116,7 +120,7 @@
 
   <div class="button-wrap">
     <button class="normal-button" on:click="{() => window.open('https://opensea.io/')}">Opensea</button>
-    <button class="normal-button" on:click="{() => alert('하이')}">Check my NFT</button>
+    <button class="normal-button" on:click="{() => (mintModalState = !mintModalState)}">Mint</button>
   </div>
 </div>
 
