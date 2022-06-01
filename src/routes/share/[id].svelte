@@ -1,6 +1,7 @@
 <script lang="ts">
   import { page } from '$app/stores'
   import WalletShare from '$lib/wallet-share/index.svelte'
+  import { MetaTags } from 'svelte-meta-tags'
 
   let address: string
   let shortAddress: string
@@ -15,7 +16,7 @@
     thisYear = $page.url.searchParams.get('year')
     ogTitle = `${shortAddress}'s wallet`
     ogDescription = `born in ${thisYear}`
-    ogImage = `/images/${thisYear}.png`
+    ogImage = `/images/${thisYear}-og.png`
   } else {
     address = 'null'
     ogTitle = `Invalid wallet account.`
@@ -35,18 +36,23 @@
   }
 </script>
 
+<MetaTags
+  twitter="{{
+    handle: '@handle',
+    site: '@site',
+    cardType: 'summary_large_image',
+    title: ogTitle,
+    description: ogDescription,
+    image: ogImage,
+    imageAlt: 'Old Popcat Basterds'
+  }}"
+/>
+
 <svelte:head>
   <title>Old Popcat Basterds</title>
   <meta property="og:title" content="{ogTitle}" />
   <meta property="og:description" content="{ogDescription}" />
   <meta property="og:image" content="{ogImage}" />
-  <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="{ogTitle}" />
-  <meta
-    name="twitter:description"
-    content="{ogDescription}"
-  />
-  <meta name="twitter:image" content="{ogImage}" />
 </svelte:head>
 
 <div class="background">
