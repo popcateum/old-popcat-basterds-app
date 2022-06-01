@@ -38,10 +38,6 @@
 </script>
 
 <svelte:head>
-  <title>Old Popcat Basterds</title>
-  <meta property="og:title" content="{ogTitle}" />
-  <meta property="og:description" content="{ogDescription}" />
-  <meta property="og:image" content="{ogImage}" />
   <MetaTags
     twitter="{{
       handle: '@Oldpopcat',
@@ -53,6 +49,10 @@
       imageAlt: 'Old Popcat Basterds'
     }}"
   />
+  <title>Old Popcat Basterds</title>
+  <meta property="og:title" content="{ogTitle}" />
+  <meta property="og:description" content="{ogDescription}" />
+  <meta property="og:image" content="{ogImage}" />
 </svelte:head>
 
 <div class="background">
