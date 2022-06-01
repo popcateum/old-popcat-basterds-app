@@ -13,9 +13,15 @@
     address = $page.params.id
     shortAddress = `${address.slice(0, 6)}...${address.slice(-4)}`
     thisYear = $page.url.searchParams.get('year')
-    ogTitle = `${shortAddress}'s wallet`
-    ogDescription = `born in ${thisYear}`
-    ogImage = `https://storage.googleapis.com/popcateum-asset/images/opb/og/${thisYear}-og.png`
+    if (parseInt(thisYear) > 2022 || parseInt(thisYear) < 2015 || Number.isNaN(parseInt(thisYear))) {
+      ogTitle = `${shortAddress}'s wallet`
+      ogDescription = `Invalid year`
+      ogImage = `https://storage.googleapis.com/popcateum-asset/images/opb/og/wallet-og.png`
+    } else {
+      ogTitle = `${shortAddress}'s wallet`
+      ogDescription = `born in ${thisYear}`
+      ogImage = `https://storage.googleapis.com/popcateum-asset/images/opb/og/${thisYear}-og.png`
+    }
   } else {
     address = 'null'
     ogTitle = `Invalid wallet account.`
