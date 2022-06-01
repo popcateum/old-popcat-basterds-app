@@ -42,7 +42,12 @@
   <meta property="og:title" content="{ogTitle}" />
   <meta property="og:description" content="{ogDescription}" />
   <meta property="og:image" content="{ogImage}" />
-  <MetaTags
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="@Oldpopcat" />
+  <meta name="twitter:title" content="{ogTitle}" />
+  <meta name="twitter:description" content="{ogDescription}" />
+  <meta name="twitter:image" content="{ogImage}" />
+  <!-- <MetaTags
     twitter="{{
       handle: '@handle',
       site: '@site',
@@ -52,7 +57,7 @@
       image: ogImage,
       imageAlt: 'Old Popcat Basterds'
     }}"
-  />
+  /> -->
 </svelte:head>
 
 <div class="background">
