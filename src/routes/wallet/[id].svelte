@@ -21,7 +21,8 @@
     address = 'null'
     ogTitle = `Invalid wallet account.`
     ogDescription = `Invalid wallet account. Please check your wallet account`
-    ogImage = `/images/wallet-og.png`
+    // ogImage = `/images/wallet-og.png`
+    ogImage = `https://storage.googleapis.com/popcateum-asset/images/opb/og/${thisYear}-og.png`
   }
   // const address: string = $page.params.id
   // const shortAddress: string = `${address.slice(0, 6)}...${address.slice(-4)}`
@@ -36,23 +37,22 @@
   }
 </script>
 
-<MetaTags
-  twitter="{{
-    handle: '@handle',
-    site: '@site',
-    cardType: 'summary_large_image',
-    title: ogTitle,
-    description: ogDescription,
-    image: ogImage,
-    imageAlt: 'Old Popcat Basterds'
-  }}"
-/>
-
 <svelte:head>
   <title>Old Popcat Basterds</title>
   <meta property="og:title" content="{ogTitle}" />
   <meta property="og:description" content="{ogDescription}" />
   <meta property="og:image" content="{ogImage}" />
+  <MetaTags
+    twitter="{{
+      handle: '@handle',
+      site: '@site',
+      cardType: 'summary_large_image',
+      title: ogTitle,
+      description: ogDescription,
+      image: ogImage,
+      imageAlt: 'Old Popcat Basterds'
+    }}"
+  />
 </svelte:head>
 
 <div class="background">

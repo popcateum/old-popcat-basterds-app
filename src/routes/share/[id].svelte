@@ -16,7 +16,8 @@
     thisYear = $page.url.searchParams.get('year')
     ogTitle = `${shortAddress}'s wallet`
     ogDescription = `born in ${thisYear}`
-    ogImage = `/images/${thisYear}-og.png`
+    // ogImage = `/images/${thisYear}-og.png`
+    ogImage = `https://storage.googleapis.com/popcateum-asset/images/opb/og/${thisYear}-og.png`
   } else {
     address = 'null'
     ogTitle = `Invalid wallet account.`
@@ -36,23 +37,22 @@
   }
 </script>
 
-<MetaTags
-  twitter="{{
-    handle: '@handle',
-    site: '@site',
-    cardType: 'summary_large_image',
-    title: ogTitle,
-    description: ogDescription,
-    image: ogImage,
-    imageAlt: 'Old Popcat Basterds'
-  }}"
-/>
-
 <svelte:head>
   <title>Old Popcat Basterds</title>
   <meta property="og:title" content="{ogTitle}" />
   <meta property="og:description" content="{ogDescription}" />
   <meta property="og:image" content="{ogImage}" />
+  <MetaTags
+    twitter="{{
+      handle: '@handle',
+      site: '@site',
+      cardType: 'summary_large_image',
+      title: ogTitle,
+      description: ogDescription,
+      image: ogImage,
+      imageAlt: 'Old Popcat Basterds'
+    }}"
+  />
 </svelte:head>
 
 <div class="background">
