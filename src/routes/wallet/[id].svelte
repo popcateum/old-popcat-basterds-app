@@ -44,8 +44,8 @@
   <meta property="og:image" content="{ogImage}" />
   <MetaTags
     twitter="{{
-      handle: '@handle',
-      site: '@site',
+      handle: '@Oldpopcat',
+      site: '@Oldpopcat',
       cardType: 'summary_large_image',
       title: ogTitle,
       description: ogDescription,
