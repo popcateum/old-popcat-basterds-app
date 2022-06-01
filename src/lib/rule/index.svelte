@@ -54,7 +54,7 @@
           </div>
           <div class="inner-wrap">
             <div class="inner-title">RULE No.3</div>
-            <div class="inner-content">You can only mint 2 NFTs with one wallet.</div>
+            <div class="inner-content">You can only mint 1 NFTs with one wallet.</div>
           </div>
           <div class="inner-wrap">
             <div class="inner-title">RULE No.4</div>
