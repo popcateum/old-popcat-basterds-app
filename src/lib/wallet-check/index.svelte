@@ -52,6 +52,16 @@
     }
   }
 
+  function copy() {
+    const t = document.createElement('textarea')
+    document.body.appendChild(t)
+    t.value = `https://oldpopcatbasterds.com/share/${thisAddress}?year=${walletData.year}`
+    t.select()
+    document.execCommand('copy')
+    document.body.removeChild(t)
+    copyModalState = true
+  }
+
   async function getCheckWallet(address: string) {
     try {
       const data = await axios.get(`https://api.oldpopcatbasterds.com/whitelist/info?address=${address}`)
@@ -193,8 +203,16 @@
               <br />
               Your can mint <span class="red-sentence">{walletData.popcat}</span>.
             </div>
+            <div class="textbox-wrap">
+              <input
+                type="text"
+                value="https://oldpopcatbasterds.com/share/{thisAddress}?year={walletData.year}"
+                readonly
+              />
+              <button class="normal-button" on:click="{copy}"> link copy </button>
+            </div>
             <div class="button-wrap">
-              <button class="normal-button" on:click="{share}"> share link </button>
+              <button class="normal-button" on:click="{share}"> link share </button>
               <button class="normal-button" on:click="{() => (modalState = !modalState)}"> mint </button>
             </div>
           </div>
@@ -219,6 +237,16 @@
 </div>
 
 <style lang="scss">
+  .textbox-wrap {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    input {
+      background-color: #0000aa;
+      box-shadow: 8px 8px #000;
+      color: white;
+    }
+  }
   .image-wrap-mobile {
     display: none;
   }
@@ -297,6 +325,17 @@
   }
 
   @media screen and (max-width: 768px) {
+    .textbox-wrap {
+      display: flex;
+      justify-content: center;
+      width: 100%;
+      input {
+        background-color: #0000aa;
+        width: 50%;
+        box-shadow: 8px 8px #000;
+        color: white;
+      }
+    }
     .image-wrap {
       display: none;
     }

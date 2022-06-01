@@ -42,6 +42,12 @@ html body {
   background-color: $primary-color;
   position: relative;
   z-index: 1;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+.background::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera*/
 }
 
 .header-space {
