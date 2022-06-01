@@ -108,7 +108,7 @@
     if ($myYear === 2015) {
       $claimablePopcat = 'Legendary Popcat'
     } else if ($myYear === 2016) {
-      $claimablePopcat = 'GOAT POPCAT'
+      $claimablePopcat = 'GOAT Popcat'
     } else if ($myYear === 2017) {
       $claimablePopcat = 'Grand Master Popcat'
     } else if ($myYear === 2018) {

@@ -73,7 +73,7 @@
     if (year === 2015) {
       walletData.popcat = 'Legendary Popcat'
     } else if (year === 2016) {
-      walletData.popcat = 'GOAT POPCAT'
+      walletData.popcat = 'GOAT Popcat'
     } else if (year === 2017) {
       walletData.popcat = 'Grand Master Popcat'
     } else if (year === 2018) {
