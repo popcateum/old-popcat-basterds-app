@@ -269,7 +269,7 @@
     }
 
     .button-wrap {
-      padding: 30px;
+      padding: 20px;
     }
     .inner-box {
       margin: 15px;
