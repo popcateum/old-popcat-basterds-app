@@ -3,7 +3,7 @@ import { provider } from '../chain/chain';
 import { ethers, Contract } from 'ethers';
 import ERC721AbiJSON from '../abi/OldPopcatBasterds.json';
 
-const opbCA = '0x0fBF385B7045bFA72062c875bE92FA988d70F4aa';
+const opbCA = '0xFB2d7eaF48bdBCdb2E519529420bA1EBdCAc73c4';
 const opbABI: any = ERC721AbiJSON;
 const rpcProvider = new ethers.providers.JsonRpcProvider('https://goerli.infura.io/v3/9aa3d95b3bc440fa88ea12eaa4456161');
 
