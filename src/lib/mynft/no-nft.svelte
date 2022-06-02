@@ -13,7 +13,7 @@
   <button class="normal-button" on:click="{() => (modalState = !modalState)}">Free Mint</button>
   <button
     class="normal-button"
-    on:click="{() => window.open('https://opensea.io/')}"
+    on:click="{() => window.open('https://opensea.io/collection/oldpopcatbasterds')}"
     >Opensea</button
   >
 </div>

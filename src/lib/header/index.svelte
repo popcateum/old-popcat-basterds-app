@@ -33,7 +33,7 @@
       </a>
     </div>
     <div class="header-menu-item">
-      <a href="https://opensea.io/" class="header-menu-item-link" target="_blank">
+      <a href="https://opensea.io/collection/oldpopcatbasterds" class="header-menu-item-link" target="_blank">
         <div class="header-menu-item-text">Opensea</div>
       </a>
     </div>

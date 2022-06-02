@@ -20,7 +20,7 @@
           </a>
         </div>
         <div class="menu-list">
-          <a href="https://opensea.io/" class="header-menu-item-link" target="_blank" on:click>
+          <a href="https://opensea.io/collection/oldpopcatbasterds" class="header-menu-item-link" target="_blank" on:click>
             <div class="header-menu-item-text">Opensea</div>
           </a>
         </div>

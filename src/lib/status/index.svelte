@@ -119,7 +119,7 @@
 
   <div class="button-wrap">
     <button class="normal-button" on:click="{() => (mintModalState = !mintModalState)}">Free Mint</button>
-    <button class="normal-button" on:click="{() => window.open('https://opensea.io/')}">Opensea</button>
+    <button class="normal-button" on:click="{() => window.open('https://opensea.io/collection/oldpopcatbasterds')}">Opensea</button>
   </div>
 </div>
 
