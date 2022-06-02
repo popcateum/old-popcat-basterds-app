@@ -24,11 +24,8 @@ async function web3ModalConnect() {
     walletconnect: {
       package: WalletConnectProvider,
       options: {
-        rpc: {
-          1: "https://mainnet.infura.io/v3/9aa3d95b3bc440fa88ea12eaa4456161",
-          // 4: "https://rinkeby.infura.io/v3/9aa3d95b3bc440fa88ea12eaa4456161",
-        },
-        network: 'ethereum'
+        infuraId: "9aa3d95b3bc440fa88ea12eaa4456161",
+        // network: 'ethereum'
         // network: 'rinkeby'
       }
     }
