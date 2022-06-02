@@ -36,7 +36,7 @@
     if (navigator.share) {
       navigator
         .share({
-          text: "Hey, It's my wallet! @Oldpopcat #OldPopcatBasterds",
+          text: "Hey, It's my wallet! @Oldpopcat #NFTs #NFTCommunity #OldPopcatBasterds",
           url: `https://oldpopcatbasterds.wtf/share/${thisAddress}?year=${walletData.year}`
         })
         .then(() => console.log('share success'))
