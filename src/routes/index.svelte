@@ -19,7 +19,7 @@
     name="twitter:description"
     content="The world’s first NFT project based on real Ethereum history."
   />
-  <meta name="twitter:image" content="/images/og-image.png" />
+  <meta name="twitter:image" content="https://storage.googleapis.com/popcateum-asset/images/opb/og/og-image.png" />
 </svelte:head>
 
 <div class="background">
