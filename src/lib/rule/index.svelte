@@ -17,7 +17,6 @@
       <div class="middle-title">Here are the rules.</div>
     </Saos>
   </div>
-  <!-- animation: typing 3.5s steps(40, end); -->
   <div class="title-wrap-mobile">
     <Saos animation="{'typing 3.5s steps(40, end)'}">
       <div class="middle-title">Do you <br /> want to be</div>

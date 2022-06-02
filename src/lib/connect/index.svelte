@@ -33,7 +33,6 @@
 
   onMount(async () => {
     const walletState = localStorage.getItem('WEB3_CONNECT_CACHED_PROVIDER')
-    console.log(walletState)
     if (walletState === `"injected"`) {
       await connect()
     }
@@ -65,8 +64,6 @@
         method: 'get',
         url: `https://api.oldpopcatbasterds.wtf/whitelist/info?address=${$myAddress}`
       })
-      // $myYear = 2022
-      // $myAddressPercent = '92.99%'
       $myYear = wlInfo.data.year
       $myAddressPercent = wlInfo.data.date_info.top_percent
     } catch (e) {

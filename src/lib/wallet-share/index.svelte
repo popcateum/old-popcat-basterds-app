@@ -32,22 +32,6 @@
   async function getCheckWallet(address: string) {
     try {
       const data = await axios.get(`https://api.oldpopcatbasterds.wtf/whitelist/info?address=${address}`)
-      // const data = {
-      //   data: {
-      //     address: '0x9df1748c7691ab6725a7f2545007b54a965e900e',
-      //     year: 2021,
-      //     first_tx_hash: '0xe5b1ef9aa6d4932422bb37bd78d23d0ae8246f74d282b815be7bf91d3d06b928',
-      //     first_tx_time: '2021-12-30T13:16:34.000Z',
-      //     first_tx_block: '13,906,910',
-      //     date_info: {
-      //       date_string: '2021-12-30',
-      //       created_per_day: '104,862',
-      //       created_acc: '128,464,217',
-      //       total_wallet_count: '139,984,693',
-      //       top_percent: '91.7702%'
-      //     }
-      //   }
-      // }
       console.log(data.data)
       walletData.year = data.data.year
       walletData.address = data.data.address

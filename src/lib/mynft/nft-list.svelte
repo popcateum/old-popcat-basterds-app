@@ -1,6 +1,5 @@
 <script lang="ts">
   import { myNftImages } from '$stores/index'
-  // let $myNftImages = $myNftImages
 
   function next() {
     let data = [...$myNftImages]

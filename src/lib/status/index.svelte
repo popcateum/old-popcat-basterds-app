@@ -14,7 +14,6 @@
   async function getStatus() {
     const data = await getMintState()
     total = await totalSupply()
-    // const data = ['33', '10', '10', '10', '51', '15', '55', '100']
     for (let i = 0; i < 8; i++) {
       saleMintState[i].current = parseInt(data[i])
     }
