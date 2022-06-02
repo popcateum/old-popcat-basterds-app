@@ -21,12 +21,8 @@
 
   let mintSuccess = false
   let spinnerState = false
-  const PUBLICSALE_PRICE: any = ethers.utils.formatEther('10000000000000000')
 
   async function saleMint() {
-    let overrides = {
-      value: ethers.utils.parseEther(PUBLICSALE_PRICE)
-    }
     try {
       const wlTicket = await axios({
         method: 'get',
@@ -40,7 +36,7 @@
     }
     try {
       setSpinner()
-      await mint($myYear, $myTicketHash, $myTicketSignature, overrides)
+      await mint($myYear, $myTicketHash, $myTicketSignature)
       mintSuccess = true
       $myBalance = 1
       setSpinner()
