@@ -21,7 +21,7 @@ const infoData: Array<Info> = [
     nftImage: './images/2016.png',
     tier: 'Top 0.0124% ~ 0.4079%',
     year: '2016',
-    title: 'GOAT POPCAT',
+    title: 'GOAT Popcat',
     total: 200,
     infoContent:
       'If you say you started to use Ethereum blockchain in 2016, people will be amazed and respect you. You are above the top 3% of cryptonians because you entered the blockchain industry so early compared to other people. The price of Ethereum was less than 10 USD.You’re a fossil which is alive.'
