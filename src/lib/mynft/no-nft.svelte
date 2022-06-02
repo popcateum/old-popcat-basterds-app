@@ -10,7 +10,7 @@
   If you want to be a Basterd, you need to get one.
 </div>
 <div class="button-wrap">
-  <button class="normal-button" on:click="{() => (modalState = !modalState)}">Mint NFT</button>
+  <button class="normal-button" on:click="{() => (modalState = !modalState)}">Free Mint</button>
   <button
     class="normal-button"
     on:click="{() => window.open('https://opensea.io/')}"

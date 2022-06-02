@@ -59,7 +59,7 @@
           <div class="inner-wrap">
             <div class="inner-title">RULE No.4</div>
             <div class="inner-content">
-              Minting Old Popcat Basterds NFT is free, but you need to send 0.01ETH grant to OBP dev.
+              Minting Old Popcat Basterds NFT is free! But the limit is 10,000.
             </div>
           </div>
         </div>
@@ -67,7 +67,7 @@
     </Saos>
 
     <div class="button-wrap">
-      <button class="normal-button" on:click="{() => (modalState = !modalState)}">Mint NFT</button>
+      <button class="normal-button" on:click="{() => (modalState = !modalState)}">Free Mint</button>
       <button class="normal-button" on:click="{() => window.open('https://opensea.io/')}">Opensea</button>
     </div>
   </div>

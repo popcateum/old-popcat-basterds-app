@@ -119,7 +119,7 @@
   </Saos>
 
   <div class="button-wrap">
-    <button class="normal-button" on:click="{() => (mintModalState = !mintModalState)}">Mint NFT</button>
+    <button class="normal-button" on:click="{() => (mintModalState = !mintModalState)}">Free Mint</button>
     <button class="normal-button" on:click="{() => window.open('https://opensea.io/')}">Opensea</button>
   </div>
 </div>

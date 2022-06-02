@@ -213,7 +213,7 @@
             </div>
             <div class="button-wrap">
               <button class="normal-button" on:click="{share}"> link share </button>
-              <button class="normal-button" on:click="{() => (modalState = !modalState)}"> mint </button>
+              <button class="normal-button" on:click="{() => (modalState = !modalState)}"> Free Mint </button>
             </div>
           </div>
         </div>
