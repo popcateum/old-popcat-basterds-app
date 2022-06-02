@@ -3,9 +3,9 @@ import { provider } from '../chain/chain';
 import { ethers, Contract } from 'ethers';
 import ERC721AbiJSON from '../abi/OldPopcatBasterds.json';
 
-const opbCA = '0xFB2d7eaF48bdBCdb2E519529420bA1EBdCAc73c4';
+const opbCA = '0x1eCD1fF79f1cb30e2E9c71103c5163374584c6f5';
 const opbABI: any = ERC721AbiJSON;
-const rpcProvider = new ethers.providers.JsonRpcProvider('https://goerli.infura.io/v3/9aa3d95b3bc440fa88ea12eaa4456161');
+const rpcProvider = new ethers.providers.JsonRpcProvider('https://rinkeby.infura.io/v3/9aa3d95b3bc440fa88ea12eaa4456161');
 
 async function balanceOf(address: string) {
   const opb: Contract = new ethers.Contract(opbCA, opbABI, provider);
