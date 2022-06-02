@@ -1,5 +1,4 @@
 <script lang="ts">
-  import { ethers } from 'ethers'
   import { Diamonds } from 'svelte-loading-spinners'
   import {
     isConnect,
@@ -13,16 +12,39 @@
     myNftImages,
     myBalance
   } from '$stores/index'
-  import { mint } from '$blockchain/contracts/sale'
+  import { getMintState, mint } from '$blockchain/contracts/sale'
   import axios from 'axios'
-  import { tokenOfOwnerByIndex, tokenURI } from '$blockchain/contracts/oldpopcatbasterds'
+  import { tokenOfOwnerByIndex, tokenURI, totalSupply } from '$blockchain/contracts/oldpopcatbasterds'
+  import { infoData } from '$lib/data/index'
+  import TotalAlertModal from './totalAlert.svelte'
+  import YearAlertModal from './yearAlert.svelte'
 
   export let modalState: boolean
 
   let mintSuccess = false
   let spinnerState = false
+  let saleMintState: any = infoData
+  let totalModalState = false
+  let yearModalState = false
+
+  async function getMintStatus(year: number) {
+    const arrNumber = year - 2015
+    const total = await totalSupply()
+    const data = await getMintState()
+    if (total === 10000) {
+      totalModalState = true
+      return false
+    }
+    if (saleMintState[arrNumber].total === parseInt(data[arrNumber])) {
+      yearModalState = true
+      return false
+    }
+  }
 
   async function saleMint() {
+    if ((await getMintStatus($myYear)) === false) {
+      return false
+    }
     try {
       const wlTicket = await axios({
         method: 'get',
@@ -82,6 +104,10 @@
     spinnerState = !spinnerState
   }
 </script>
+
+<TotalAlertModal modalState="{totalModalState}" on:click="{() => (totalModalState = !totalModalState)}" />
+
+<YearAlertModal modalState="{yearModalState}" on:click="{() => (yearModalState = !yearModalState)}" />
 
 {#if modalState}
   <div class="modal">
