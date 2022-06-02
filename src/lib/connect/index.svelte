@@ -63,7 +63,7 @@
     try {
       const wlInfo = await axios({
         method: 'get',
-        url: `https://api.oldpopcatbasterds.com/whitelist/info?address=${$myAddress}`
+        url: `https://api.oldpopcatbasterds.wtf/whitelist/info?address=${$myAddress}`
       })
       // $myYear = 2022
       // $myAddressPercent = '92.99%'

@@ -30,7 +30,7 @@
     try {
       const wlTicket = await axios({
         method: 'get',
-        url: `https://api.oldpopcatbasterds.com/whitelist/ticket?address=${$myAddress}`
+        url: `https://api.oldpopcatbasterds.wtf/whitelist/ticket?address=${$myAddress}`
       })
       $myYear = wlTicket.data.year
       $myTicketHash = wlTicket.data.ticket_hash

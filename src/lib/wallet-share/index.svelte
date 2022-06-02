@@ -31,7 +31,7 @@
 
   async function getCheckWallet(address: string) {
     try {
-      const data = await axios.get(`https://api.oldpopcatbasterds.com/whitelist/info?address=${address}`)
+      const data = await axios.get(`https://api.oldpopcatbasterds.wtf/whitelist/info?address=${address}`)
       // const data = {
       //   data: {
       //     address: '0x9df1748c7691ab6725a7f2545007b54a965e900e',

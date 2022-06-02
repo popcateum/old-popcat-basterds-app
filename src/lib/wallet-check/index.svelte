@@ -37,14 +37,14 @@
       navigator
         .share({
           text: "Hey, It's my wallet! @Oldpopcat #OldPopcatBasterds",
-          url: `https://oldpopcatbasterds.com/share/${thisAddress}?year=${walletData.year}`
+          url: `https://oldpopcatbasterds.wtf/share/${thisAddress}?year=${walletData.year}`
         })
         .then(() => console.log('share success'))
         .catch(error => console.log('share error', error))
     } else {
       const t = document.createElement('textarea')
       document.body.appendChild(t)
-      t.value = `https://oldpopcatbasterds.com/share/${thisAddress}?year=${walletData.year}`
+      t.value = `https://oldpopcatbasterds.wtf/share/${thisAddress}?year=${walletData.year}`
       t.select()
       document.execCommand('copy')
       document.body.removeChild(t)
@@ -55,7 +55,7 @@
   function copy() {
     const t = document.createElement('textarea')
     document.body.appendChild(t)
-    t.value = `https://oldpopcatbasterds.com/share/${thisAddress}?year=${walletData.year}`
+    t.value = `https://oldpopcatbasterds.wtf/share/${thisAddress}?year=${walletData.year}`
     t.select()
     document.execCommand('copy')
     document.body.removeChild(t)
@@ -64,7 +64,7 @@
 
   async function getCheckWallet(address: string) {
     try {
-      const data = await axios.get(`https://api.oldpopcatbasterds.com/whitelist/info?address=${address}`)
+      const data = await axios.get(`https://api.oldpopcatbasterds.wtf/whitelist/info?address=${address}`)
       // const data = {
       //   data: {
       //     address: '0x9df1748c7691ab6725a7f2545007b54a965e900e',
@@ -206,7 +206,7 @@
             <div class="textbox-wrap">
               <input
                 type="text"
-                value="https://oldpopcatbasterds.com/share/{thisAddress}?year={walletData.year}"
+                value="https://oldpopcatbasterds.wtf/share/{thisAddress}?year={walletData.year}"
                 readonly
               />
               <button class="normal-button" on:click="{copy}"> link copy </button>
