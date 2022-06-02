@@ -14,7 +14,7 @@ async function mint(createdAt: number, hash: string, signature: string) {
 }
 
 function isMinted(address: string) {
-  const sale: Contract = new ethers.Contract(saleCA, saleABI, provider);
+  const sale: Contract = new ethers.Contract(saleCA, saleABI, rpcProvider);
   return sale.isMinted(address);
 }
 
